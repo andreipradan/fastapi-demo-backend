@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "fastapi-demo"
+version = "0.1.0"
+description = ""
+authors = ["Andrei Prădan <andrei.pradan@xapo.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.74.0"
+uvicorn = {extras = ["standard"], version = "^0.17.5"}
+edgedb = "^0.22.0"
+Jinja2 = "^3.0.3"
+python-multipart = "^0.0.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0.1"
+
+[tool.poetry.scripts]
+server = 'fastapi_demo.main:start'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
